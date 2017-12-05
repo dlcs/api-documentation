@@ -80,6 +80,16 @@ curl -X PATCH -u <api id>:<api secret> \
   https://api.dlc.services/customers/<customer id>/spaces/<space id>
 ```
 
+Those properties are:
+
+| Name            |
+|-----------------|
+| imageBucket     |
+| tags            |
+| keep            |
+| transform       |
+| maxUnauthorised |
+
 ### Deleting a Space
 
 Although a Space record can be removed, this does not (at the moment) remove the images belonging to that space.
@@ -244,6 +254,22 @@ curl -X PATCH -u <api id>:<api secret> \
   --data '{ "string1": "abcd1", "number1": 1 }' \
   https://api.dlc.services/customers/<customer id>/spaces/<space id>/images/<image id>
 ```
+
+Those properties are:
+
+| Name                    |
+|-------------------------|
+| string1                 |
+| string2                 |
+| string3                 |
+| number1                 |
+| number2                 |
+| number3                 |
+| tags                    |
+| roles                   |
+| maxUnauthorised         |
+| thumbnailPolicy         |
+| imageOptimisationPolicy |
 
 ### Deleting an Image
 
