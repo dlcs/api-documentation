@@ -18,7 +18,9 @@ Images are organised using a loose organisational unit called a Space.
 ### Creating a Space
 
 ```
-curl -X POST -u <api id>:<api secret> --data '{ "name": "<space name>" }' https://api.dlc.services/customers/<customer id>/spaces
+curl -X POST -u <api id>:<api secret> \
+  --data '{ "name": "<space name>" }' \
+  https://api.dlc.services/customers/<customer id>/spaces
 ```
 
 This will return a piece of JSON-LD that describes the Space, e.g.:
@@ -73,7 +75,9 @@ Please use the `?page=<x>` query string to page through the list of results whic
 There are a limited set of properties of a Space which may be modified using the PATCH HTTP verb.
 
 ```
-curl -X PATCH -u <api id>:<api secret> --data '{ "maxUnauthorised": 400 }' https://api.dlc.services/customers/<customer id>/spaces/<space id>
+curl -X PATCH -u <api id>:<api secret> \
+  --data '{ "maxUnauthorised": 400 }' \
+  https://api.dlc.services/customers/<customer id>/spaces/<space id>
 ```
 
 ### Deleting a Space
@@ -117,7 +121,8 @@ curl -X POST -u <api id>:<api secret> \
 This will return information about the Batch that the Images have been collected together in. The current activity can be fetched by the following command which will give a list of the unfinished, active Batches for your user:
 
 ```
-curl -u <api id>:<api secret> https://api.dlc.services/customers/<customer id>/queue/active
+curl -u <api id>:<api secret> \
+  https://api.dlc.services/customers/<customer id>/queue/active
 ```
 
 If there is currently an active Batch then the output may look something like this:
@@ -245,7 +250,8 @@ curl -X PATCH -u <api id>:<api secret> \
 Images may be deleted using the DELETE HTTP verb:
 
 ```
-curl -X DELETE -u <api id>:<api secret> https://api.dlc.services/customers/<customer id>/spaces/<space id>/images/<image id>
+curl -X DELETE -u <api id>:<api secret> \
+  https://api.dlc.services/customers/<customer id>/spaces/<space id>/images/<image id>
 ```
 
 ***Please note that the `<image id>` is the last part of the Image's ID property***
