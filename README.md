@@ -1,6 +1,4 @@
-# api-documentation
-
-DLCS API documentation
+# DLCS API documentation
 
 # First steps
 
